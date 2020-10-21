@@ -1,10 +1,12 @@
 import pandas as pd
 import model  #see model.py
 
+#Train
 df_raw = pd.read_csv('/path/to.csv')
 m = model.Model(n_days=40, window_size=20)
 m.train(df_raw)
 
+#Predict
 df_raw = pd.read_csv('/path/to.csv')
 m = model.Model(n_days=40, window_size=20)
 m.load()
